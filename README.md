@@ -4,7 +4,9 @@
 
 ### constrainPoint()
 
-`constrainPoint()` 函数的主要目的是将给定的点限制在一个矩形区域内。这意味着如果一个点超出了指定的矩形边界，那么它会被调整至边界内。这个函数在许多图像处理和计算机视觉任务中都非常有用，特别是在涉及图像裁剪、边界检测和对齐### similarityTransformation()
+`constrainPoint()` 函数的主要目的是将给定的点限制在一个矩形区域内。这意味着如果一个点超出了指定的矩形边界，那么它会被调整至边界内。这个函数在许多图像处理和计算机视觉任务中都非常有用，特别是在涉及图像裁剪、边界检测和对齐
+
+### similarityTransformation()
 
 `similarityTransformation()` 函数的目标是计算两组点之间的相似性变换，这样一组点就可以尽可能地接近另一组点。特别地，这个函数利用了OpenCV的`estimateRigidTransform`函数来实现这个目标。然而，由于`estimateRigidTransform`需要至少三对对应点，而这里提供的只有会创建第三对点，使这三对点形成一个等边三角形。这是一个巧妙的解决方法，使得我们能够利用已有的函数来完成更复杂的任务。
 
@@ -51,4 +53,4 @@ import openpyxl
 from PIL import Image,ImageDraw,ImageFont
 from skimage.metrics import structural_similarity as ssim
 
-facebook.xlxs是我项目中脸谱数据库的信息，要下载对于图片访问云盘https://pan.quark.cn/s/6ebeb610bac2
+facebook.xlxs是我项目中脸谱数据库的信息，要下载对应图片访问云盘https://pan.quark.cn/s/6ebeb610bac2
